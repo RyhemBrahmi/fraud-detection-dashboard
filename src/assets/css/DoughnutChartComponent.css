@@ -1,0 +1,50 @@
+.doughnut-chart-container {
+    width: 100%;
+    max-width: 400px; /* Ajuste selon tes besoins */
+    margin: auto;
+    
+  }
+  
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  
+  .chart-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1d2b4f;
+  }
+  
+  .chart-icon {
+    font-size: 20px;
+    color: #4c00ff;
+  }
+  
+  .chart-wrapper {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .no-data-text {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .doughnut-chart-container {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .chart-wrapper {
+      height: 200px;
+    }
+  }
+  

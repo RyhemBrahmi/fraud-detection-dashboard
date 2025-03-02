@@ -1,0 +1,287 @@
+.dashboard-container {
+  background: #e3eaf4;
+  min-height: 100vh;
+  margin: 0;
+  padding: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.fixed-search-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: #e3eaf4;
+  margin-bottom: 10px;
+  z-index: 1000;
+  background: rgba(227, 234, 244, 0.8); /* Rend le fond un peu transparent */
+  backdrop-filter: blur(4px); /* Applique un flou d’arrière-plan */
+
+}
+
+
+
+
+.breadcrumb-container {
+  flex: 1;
+  text-align: left;
+}
+
+.breadcrumbs {
+  font-size: 34px;
+  color: #4f5d75;
+  font-weight: bold;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #4f5d75;
+}
+
+.breadcrumbs span {
+  color: #adb5bd;
+}
+
+.search-bar-card {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* === Layout Principal === */
+.cards-row {
+  display: flex;
+  align-items: stretch; /* Aligner les cartes à la même hauteur */
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 5px;
+}
+
+/* === Cartes Principales === */
+.left-card,
+.right-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Assurer une hauteur uniforme */
+}
+
+.left-card {
+  flex: 2.5;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px 20px;
+  width: 100%;
+  margin-left: 20px;
+  height: 875px;
+}
+
+.right-card {
+  flex: 2.5;
+  padding: 15px 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.charts-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+/* === Espacement entre les charts === */
+
+.lineChart-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 55%;
+}
+.barChart-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  margin-top: -13px; 
+}
+
+.pieChart-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Cartes Globales === */
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.card:hover {
+  transform: none;
+}
+
+/* === Icônes & Utilisateur === */
+.icons-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+.notification-icon {
+  font-size: 20px;
+  color: #6c757d;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.notification-icon:hover {
+  color: #4c00ff;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.user-avatar:hover {
+  transform: scale(1.05);
+}
+
+/* === Charts === */
+.bar-chart-container {
+  background: #fff;
+  padding: 20px;
+  position: relative;
+}
+.chart-container {
+  background: #fff;
+  padding: 20px;
+  position: relative;
+}
+.bar-chart-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.chart-container {
+  background: #fff;
+  padding: 20px;
+  position: relative;
+}
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bar-chart-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1d2b4f;
+}
+
+.chart-icon {
+  color: #4c00ff;
+  font-size: 22px;
+  transition: transform 0.3s;
+}
+
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .cards-row {
+      flex-direction: column;
+  }
+}
+
+/* === Responsive Design === */
+
+/* Ajustement des cartes et graphiques */
+@media (max-width: 1200px) {
+  .left-card, .right-card {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+
+  }
+
+  .charts-row {
+    flex-direction: column;
+  }
+
+  .lineChart-card, .pieChart-card {
+    width: 100%;
+  }
+  .lineChart-card, .barChart-card, .pieChart-card {
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+/* Mode mobile */
+@media (max-width: 768px) {
+  .cards-row {
+    flex-direction: column;
+    gap: 30px;
+    padding: 35px 30px;
+  }
+
+  .left-card, .right-card {
+    padding: 5px;
+    border-radius: 15px;
+  }
+
+  .lineChart-card, .barChart-card, .pieChart-card {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .fixed-search-bar {
+    flex-direction: column;
+    padding: 0px;
+    text-align: center;
+    
+  }
+
+  .icons-container {
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .breadcrumbs {
+    font-size: 24px; /* Réduction de la taille des titres */
+  }
+
+  .search-bar-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .notification-icon {
+    font-size: 18px;
+  }
+
+  .user-avatar {
+    width: 35px;
+    height: 35px;
+  }
+}

@@ -1,0 +1,21 @@
+.toggle-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .toggle-buttons button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    background: #eee;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .toggle-buttons .active {
+    background: #8884d8;
+    color: white;
+  }
+  
